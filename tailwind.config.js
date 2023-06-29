@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "orange": "#FF6F00",
+        "white": "#FFFFFF",
+        "purple": "#460482",
+        "ash": "#C4C4C4",
+        "text-black": "#333333",
+        "grey": "#6B6666",
+        "gray-6":"#F2F2F2",
+        "text-purple": "#10217D"
+      }
+    },
+    fontFamily: {
+      "DmSansBold": ["DmSansBold"],
+      "DmSansRegular": ["DmSansRegular"],
+      "MulishBold": ["MulishBold"],
+      "MulishRegular": ["MulishRegular"],
+      "Poppins": ["Poppins"]
+    }
+  },
+  plugins: [],
+}
+
