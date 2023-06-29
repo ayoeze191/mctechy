@@ -4,6 +4,7 @@ import Hero from './Hero'
 import CoursesAvailable from './CoursesAvailable'
 import Connect from './Connect'
 import Benefits from './Benefits'
+import NotSure from './NotSure'
 const Hompage = () => {
   return (
     <div className=' mt-0 '>
@@ -16,6 +17,7 @@ const Hompage = () => {
         <CoursesAvailable />
         <Connect />
         <Benefits />
+        <NotSure />
     </div>
   )
 }

@@ -10,7 +10,7 @@ import Linkedln from "./../../assets/homepage/connect/Linkedln.png"
 
 const Connect = () => {
   return (
-    <div className=' py-[86px] text-text-black px-[20px] md:px-0'>
+    <div className=' md:py-[86px] text-text-black px-[20px] md:px-0'>
     <div className=' container mx-auto'>
         <HompagesHeader text={'Connect With Our 50+ Hiring Partners'}/>
         <p className='font-normal text-[20px] leading-[26.04px] text-center text-text-black font-DmSansRegular mt-[22px]  md:px-[44px]'>

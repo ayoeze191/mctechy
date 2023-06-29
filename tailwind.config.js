@@ -23,6 +23,14 @@ export default {
       "MulishBold": ["MulishBold"],
       "MulishRegular": ["MulishRegular"],
       "Poppins": ["Poppins"]
+    },
+    container: {
+      screens: {
+        md: "720px",
+        lg: "960px",
+        xl: "1140px",
+        "2xl": "1140px"
+      }
     }
   },
   plugins: [],

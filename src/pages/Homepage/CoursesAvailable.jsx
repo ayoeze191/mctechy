@@ -7,6 +7,7 @@ import frontend from "./../../assets/homepage/courses/frontend.png"
 import businessAnalyst from "./../../assets/homepage/courses/businessAnalyst.png"
 import productdesign from "./../../assets/homepage/courses/productdesign.png"
 import projectmanagement from "./../../assets/homepage/courses/projectmanagement.png"
+import useQuery from '../../assets/hooks/useQuery';
 
 
 const allCourses = [
@@ -37,17 +38,7 @@ const allCourses = [
 ]
 
 const CoursesAvailable = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-}, []);
+  const {width} = useQuery()
 
   return (
     <div className='w-full'>
