@@ -27,6 +27,11 @@
     src: url('./fonts/Poppins-Regular.ttf');
 }
 
+@font-face {
+    font-family: "jakarta";
+    src: url('./fonts/PlusJakartaSans-Regular.ttf');
+}
+
 *, body{
     padding: 0;
     margin: 0;

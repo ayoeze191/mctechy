@@ -9,7 +9,7 @@ import useQuery from '../../assets/hooks/useQuery'
 const NotSure = () => {
     const {width} = useQuery()
   return (
-    <div className='w-full md:py-[31px]'>
+    <div className='w-full py-[31px]'>
     <div className='container px-[20px] md:px-0 mx-auto'>
         <HompagesHeader  text={width<768?'Watch a  quick intro':'Not sure what program, watch this quick guide'}/>
         <div className='mt-[21px] flex justify-center items-center'>

@@ -5,6 +5,8 @@ import CoursesAvailable from './CoursesAvailable'
 import Connect from './Connect'
 import Benefits from './Benefits'
 import NotSure from './NotSure'
+import WhatGraduateHasTosay from '../../assets/homepage/WhatGraduateHasTosay/WhatGraduateHasTosay'
+import { Footer } from '../../component/Footer'
 const Hompage = () => {
   return (
     <div className=' mt-0 '>
@@ -18,6 +20,8 @@ const Hompage = () => {
         <Connect />
         <Benefits />
         <NotSure />
+        <WhatGraduateHasTosay />
+        <Footer />
     </div>
   )
 }

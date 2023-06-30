@@ -15,14 +15,19 @@ export default {
         "grey": "#6B6666",
         "gray-6":"#F2F2F2",
         "text-purple": "#10217D"
-      }
+      },
+      screens: {
+        md: "883px"
+      },
     },
+    
     fontFamily: {
       "DmSansBold": ["DmSansBold"],
       "DmSansRegular": ["DmSansRegular"],
       "MulishBold": ["MulishBold"],
       "MulishRegular": ["MulishRegular"],
-      "Poppins": ["Poppins"]
+      "Poppins": ["Poppins"],
+      "jakarta": ["jakarta"]
     },
     container: {
       screens: {
@@ -31,7 +36,8 @@ export default {
         xl: "1140px",
         "2xl": "1140px"
       }
-    }
+    },
+    
   },
   plugins: [],
 }

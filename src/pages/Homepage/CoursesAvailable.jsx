@@ -64,7 +64,7 @@ const CoursesAvailable = () => {
 
         {/* courses */}
 
-            <div className='flex flex-col gap-[56px] md:grid md:grid-cols-3 md:gap-x-[55px] md:gap-y-[56.28px]'>
+            <div className='flex flex-col gap-[56px] sm:grid-cols-2 sm:grid md:grid-cols-3 md:gap-x-[55px] md:gap-y-[56.28px]'>
               {allCourses.map((item, index) => <Course {...item} key={index}/> )}
             </div>
 

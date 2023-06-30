@@ -14,9 +14,7 @@ const useQuery = () => {
         window.removeEventListener('resize', handleWindowSizeChange);
     }
 }, [])
-
   return {width}
-
 }
 
 export default useQuery
