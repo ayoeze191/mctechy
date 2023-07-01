@@ -1,4 +1,3 @@
-import React from 'react'
 import HompagesHeader from '../../component/ui/HompagesHeader'
 import Program from "./../../assets/homepage/notsure/Program.png"
 import play from "./../../assets/homepage/notsure/play-button.png"

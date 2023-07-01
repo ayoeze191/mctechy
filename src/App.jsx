@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import {
   createBrowserRouter,
@@ -12,7 +11,7 @@ import { createContext } from 'react';
 import About from './pages/About/Aboutpage';
 import Frontendpage from './pages/Frontend/Frontendpage';
 
-export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: (value) => {}})
+export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: () => {}})
 
 
 

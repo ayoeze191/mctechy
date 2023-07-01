@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HompagesHeader from '../../../component/ui/HompagesHeader'
 import graduates from "./../../../assets/homepage/graduates/graduates.png"
 import dammy from "./../../../assets/homepage/graduates/dammy.png"

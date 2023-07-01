@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button, DoubleButtonColumn } from '../../component/ui/button'
 import forward from "./../../assets/frontendpage/forward.png"
 const Build = () => {
   return (

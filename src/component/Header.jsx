@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import hamburger from "./../assets/header/hamburger.png" 
 import Logo from "./../assets/header/Logo.png" 
 import LogoPurple from "./../assets/header/LogoPurple.png" 
