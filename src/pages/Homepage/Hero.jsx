@@ -1,11 +1,9 @@
 // import React from 'react'
 import forward from "./../../assets/homepage/hero/forward.png"
 import icon from "./../../assets/homepage/hero/icon.png"
-
 import people from "./../../assets/homepage/hero/1.png"
 import herobg from "./../../assets/homepage/hero/herobg.png"
 import herobgdesk from "./../../assets/homepage/hero/herobgDesktop.png"
-
 const Hero = () => {
   return (
     <div className=''>
