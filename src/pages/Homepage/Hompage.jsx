@@ -12,7 +12,7 @@ const Hompage = () => {
     <div className=' mt-0 '>
         <div className='bg-purple pt-[22px] md:py-[17px] '>
           <div className='md:mb-[98px]'>
-        <Header />
+        <Header color={'white'} />
         </div>
         <Hero />
         </div>

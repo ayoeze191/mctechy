@@ -12,7 +12,7 @@ const Connect = () => {
   return (
     <div className=' py-[31px] md:py-[86px] text-text-black px-[20px] md:px-0'>
     <div className=' container mx-auto'>
-        <HompagesHeader text={'Connect With Our 50+ Hiring Partners'}/>
+        <HompagesHeader text={'Connect With Our 50+ Hiring Partners'} after={'purple'}/>
         <p className='font-normal text-[20px] leading-[26.04px] text-center text-text-black font-DmSansRegular mt-[22px]  md:px-[44px]'>
         McTechy’s coding bootcamps students benefit from an industry-leading network of hiring partners, featuring over 1,500 innovative partners looking to hire emerging talent.
         </p>

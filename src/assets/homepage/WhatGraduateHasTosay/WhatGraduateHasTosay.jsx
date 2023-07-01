@@ -15,7 +15,7 @@ const WhatGraduateHasTosay = () => {
     <div className='container mx-auto mt-[48px] md:mt-[80px] text-text-black px-[20px] md:px-0'>
         <div>
             <div className='mb-[46.9px]'>
-        <HompagesHeader text={width<768?"Hear from our graduates":'What graduates have to say'}/>
+        <HompagesHeader text={width<768?"Hear from our graduates":'What graduates have to say'} after={'purple'}/>
         </div>
         <div className='flex flex-col md:flex-row gap-[40px] md:gap-[132px]'>
             <div className={`w-full md:w-1/2 ${width < 768?"order-2":"order-1"}`}>       

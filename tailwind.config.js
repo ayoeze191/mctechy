@@ -19,6 +19,13 @@ export default {
       screens: {
         md: "883px"
       },
+      backgroundImage: {
+       aboutHero:  'url("./assets/aboutpage/herobg.png")',
+       aboutHeroMobile:  'url("./assets/aboutpage/aboutHerobgmobile.png")',
+       frontendHero: 'url("./assets/frontendpage/frontendbg.png")',
+       frontendherobgmobile: 'url("./assets/frontendpage/frontendherobgmobile.png")'
+
+      }
     },
     
     fontFamily: {

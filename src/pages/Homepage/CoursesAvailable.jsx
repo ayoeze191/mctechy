@@ -43,7 +43,7 @@ const CoursesAvailable = () => {
   return (
     <div className='w-full'>
     <div className='py-[78px] md:py-[37px] container px-[20px] md:px-0 mx-auto text-text-black'>
-        <HompagesHeader text={width<768?'Best courses available':'Hot courses available'}/>
+        <HompagesHeader text={width<768?'Best courses available':'Hot courses available'} after={'purple'}/>
         <p className='font-normal text-[20px] leading-[26.04px] text-center text-text-black font-DmSansRegular mt-[22px]'>
         50-hour programs that have helped thousands of students launch new careers in tech.
         </p>
