@@ -1,4 +1,3 @@
-import React from 'react'
 import HompagesHeader from '../../component/ui/HompagesHeader'
 import cisco from "./../../assets/homepage/connect/cisco.png"
 import github from "./../../assets/homepage/connect/github.png"

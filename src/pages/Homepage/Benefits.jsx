@@ -1,4 +1,3 @@
-import React from 'react'
 import HompagesHeader from '../../component/ui/HompagesHeader'
 import benefitbg from "./../../assets/homepage/benefit/benefitbg.png"
 

@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react'
 import HompagesHeader from '../../component/ui/HompagesHeader';
 import bullet from "./../../assets/homepage/courses/bullet.png";
 import Vector from "./../../assets/homepage/courses/Vector.png";
