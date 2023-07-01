@@ -1,6 +1,6 @@
 // import React from 'react'
 import forward from "./../../assets/homepage/hero/forward.png"
-import icon from "./../../assets/homepage/hero/icon.png"
+// import icon from "./../../assets/homepage/hero/icon.png"
 import people from "./../../assets/homepage/hero/1.png"
 import herobg from "./../../assets/homepage/hero/herobg.png"
 import herobgdesk from "./../../assets/homepage/hero/herobgDesktop.png"
@@ -20,7 +20,7 @@ const Hero = () => {
             </p>
             <button className='text-white sm:text-purple sm:bg-white w-fit rounded-lg font-[500] text-[14.32px] leading-[21.34px] flex gap-[10.69px] font-DmSansRegular items-center py-[17.04px] px-[16.95px] '>
                 Get Started <div className='sm:hidden'><img src={forward} alt="" /></div>
-                <div className='hidden sm:block'><img src={icon} alt="" /></div>
+                {/* <div className='hidden sm:block'><img src={icon} alt="" /></div> */}
             </button>
             <div className='flex flex-col gap-[16.75px] sm:flex-row'>
                 <div>
