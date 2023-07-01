@@ -34,7 +34,7 @@ export const Footer = () => {
             </div>
             <FooterAbout />
             <div className='w-full border-t-solid border-t-white border-t text-[12.61px] font-normal leading-[36.03px] font-DmSansRegular text-white text-center py-[5px] md:mt-[42px]'>
-            All Content © McTechy Inc. 2015-2023. "McTechy" and the McTechy Logo are trademarks of McGeorge Consulting Ltd. All Rights Reserved.
+            All Content © McTechy Inc. 2015-2023. McTechy and the McTechy Logo are trademarks of McGeorge Consulting Ltd. All Rights Reserved.
             </div>
         </div>
     </div>
