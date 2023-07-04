@@ -1,7 +1,7 @@
 import React from 'react'
 import Vector from "./../assets/footer/Vector.png"
 import Input from './ui/Input'
-import { Button } from './ui/button'
+import Button  from './ui/button'
 import Footerlogo from "./../assets/footer/Footerlogo.png"
 import facebook from "./../assets/footer/socials/facebook.png"
 import insta from "./../assets/footer/socials/inta.png"
