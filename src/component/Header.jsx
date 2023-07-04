@@ -2,9 +2,10 @@ import { useContext } from 'react'
 import hamburger from "./../assets/header/hamburger.png" 
 import Logo from "./../assets/header/Logo.png" 
 import LogoPurple from "./../assets/header/LogoPurple.png" 
-
+import {BsList} from "react-icons/bs"
 import arrowdown from "./../assets/header/arrowdown.png"
 import { ModalContext } from '../App'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 const Header = ({color}) => {
@@ -14,8 +15,9 @@ const Header = ({color}) => {
         <div className='h-full flex items-center  '>
           <img src={color=="white"?Logo:LogoPurple} className='w-[140px] h-[24px] md:w-[initial] md:h-[initial]' />
         </div>
-        <div className='md:hidden h-full flex items-center'> 
-          <img src={hamburger} />
+        
+        <div className='h-full flex items-center md:hidden'>
+            <BsList color={color=='white'?'white':'black'} width={'24px'} height={'24px'}/>
         </div>
         <Nav color={color}/>
         <div className='hidden md:flex gap-[34px] font-Poppins text-[13px]'>
@@ -32,13 +34,22 @@ const Header = ({color}) => {
 }
 
 
-const NavItem = ({text, dropdown, onclick}) => {
-  
+const NavItem = ({text, dropdown, onclick, link}) => {
+  const navigate = useNavigate()
+  const runFunction = () => {
+    console.log("runn". link)
+    if(link) {
+      navigate(link)
+    }
+    else {
+      onclick()
+    }
+  }
 
   return (
-    <div className='flex items-center gap-[13px] font-DmSansRegular font-medium leading-[17.58px] text-[13.5px] cursor-pointer' >
+    <div className='flex items-center gap-[13px] font-DmSansRegular font-medium leading-[17.58px] text-[13.5px] cursor-pointer' onClick={runFunction}>
       <p>{text}</p>
-      <div onClick={onclick}>
+      <div >
         {dropdown?<img src={arrowdown} />: null}
       </div>
     </div>
@@ -49,11 +60,12 @@ const NavItemText = [
   {
     text: "Home",
     dropdown: false,
+    link: "/"
   },
   {
     text: "About",
     dropdown: true,
-    modal: "about"
+    modal: "about",
   },
   {
     text: "Courses",
@@ -67,7 +79,8 @@ const NavItemText = [
   },
   {
     text: "Programs",
-    dropdown: false
+    dropdown: false,
+    link: "/programs"
   },
   {
     text: "FAQ",

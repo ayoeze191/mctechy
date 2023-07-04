@@ -8,7 +8,7 @@ import benefitbgmob from "./../../assets/homepage/benefit/benefitbgmob.png"
 
 const WhyUs = () => {
   return (
-    <div className=' bg-purple mt-[111px]'>
+    <div className=' bg-purple mt-[31px] md:mt-[111px]'>
     <div className='text-white container flex items-center flex-col md:flex-row px-[20px] md:px-0 gap-[23px] md:gap-[68px] py-[25px] mx-auto'>
         <div className='w-full'>
         <img src={benefitbgmob} className='w-full md:hidden block'/>

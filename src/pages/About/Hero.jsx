@@ -5,7 +5,7 @@ const Hero = () => {
     const {width} = useQuery()
 
   return (
-    <div className='bg-center bg-cover bg-no-repeat bg-aboutHero h-[489px] sm:h-[416px] w-full relative text-white bg-aboutHeroMobile'>
+    <div className='bg-center bg-cover bg-no-repeat md:bg-aboutHero h-[489px] sm:h-[416px] w-full relative text-white bg-aboutHeroMobile'>
         <div className='bg-black w-full absolute h-full opacity-40'>
         </div>
         <div className='container px-[20px] lg:px-[0]  flex flex-col gap-[18px] mx-auto z-40 relative justify-center h-full'>

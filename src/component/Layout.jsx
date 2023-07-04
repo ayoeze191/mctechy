@@ -6,11 +6,20 @@ import AboutUsModal from "./Modal/AboutUsModal"
 import { useContext } from "react"
 import { ModalContext } from "../App"
 import CoursesModal from "./Modal/CoursesModal"
+import { Outlet } from "react-router-dom"
+import Sidebar from "./ui/Sidebar"
+
 
 
 const Layout = ({ children }) => {
     const {showModal, modalHandler, modalContent} = useContext(ModalContext)
     
+    const [sideBar, setSidebar] = useState(true)
+
+    const handleSiderBar = () => {
+        setSidebar(!sideBar)
+    }
+
     useEffect(() => {
         const handleClickChange = (e) => {
             console.log("event listener")
@@ -35,8 +44,9 @@ const Layout = ({ children }) => {
     return (    
         <div className="h-fit px-0">
             <Topbar />
+            {sideBar && <Sidebar onClose={handleSiderBar}/>}
             <div>
-            {children}
+            <Outlet />
             <ModalWrapper showWrapper={showModal}>
                 { modalContent == "courses"?<CoursesModal />
                 :modalContent == "about"?<AboutUsModal />:"empty"}

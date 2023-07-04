@@ -6,6 +6,9 @@ import Build from './Build'
 import Testimony from './Testimony'
 import Reasons from '../Reasons/Reasons'
 import NotSure from '../Homepage/NotSure'
+import WhatYouWillLearn from './whatYouWillLearn'
+import Pricing from './Pricing'
+import Become from './Become'
 
 const Frontendpage = () => {
   return (
@@ -20,7 +23,11 @@ const Frontendpage = () => {
         <Testimony />
         </div>
         <Reasons />
+        <WhatYouWillLearn />
+        <Pricing />
         <NotSure />
+        
+        <Become />
         <div>
         </div>
         <Footer />
