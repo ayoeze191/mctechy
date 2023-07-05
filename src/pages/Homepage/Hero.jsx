@@ -7,8 +7,8 @@ import herobgdesk from "./../../assets/homepage/hero/herobgDesktop.png"
 const Hero = () => {
   return (
     <div className=''>
-        <div className="container mx-auto px-[20px] md:px-0 mt-[42px] flex flex-col gap-[30.1px] sm:gap-[55px] sm:flex-row sm:min-h-[75vh]">
-        <div className='flex gap-[30px] flex-col sm:w-1/2'>
+        <div className="container mx-auto px-[20px] md:px-0 mt-[42px] flex flex-col gap-[30.1px]  sm:flex-row sm:min-h-[75vh]">
+        <div className='flex gap-[26px] flex-col sm:w-1/2'>
             <h1 className="font-MulishRegular font-bold text-[32px] leading-[50px] text-white sm:hidden">
             Transition into tech in 12 weeks?
             </h1>
@@ -44,9 +44,9 @@ const Hero = () => {
             </div>
             </div>
         </div>
-        <div className='w-full max-w-[350px] mx-auto sm:w-1/2 h-[373px] sm:h-[initial] object-center'>
-            <img src={herobg} alt=""  className='w-full block sm:hidden'/>
-            <img src={herobgdesk} alt="" className='hidden sm:block w-full h-full sm:h-[initial]'/>
+        <div className='w-full md:max-w-none mx-auto sm:w-1/2  object-center flex-1 h-[373px]'>
+            <img src={herobg} alt=""  className='w-full block md:hidden h-full'/>
+            <img src={herobgdesk} alt="" className='hidden md:block w-full h-full '/>
         </div>
         </div>
     </div>
