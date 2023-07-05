@@ -2,8 +2,8 @@ import React from 'react'
 
 const CoursesModal = () => {
   return (
-    <div className='flex justify-start'>
-        <div className='flex flex-col gap-[23px] mr-[51px] w-[45%]'>
+    <div className='flex justify-start flex-col md:flex-row'>
+        <div className='flex flex-col gap-[23px] md:mr-[51px] md:w-[45%]'>
             <h2 className='text-[24px] leading-[31.25px] text-text-black font-bold font-MulishRegular'>Courses</h2>
             <p className='font-DmSansRegular text-[20px] leading-[40px] text-text-black'>
                 Learn a new digital skill by taking one of our certificate courses in-person or online. Our courses are part-time and can take anywhere from 5 to 10 weeks to complete.

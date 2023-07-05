@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Logo from "./../../assets/header/LogoPurple.png"
+import { useNavigate } from 'react-router-dom'
+import { ModalContext } from '../../App'
 
-
-const Sidebar = ({onClose }) => {
+const Sidebar = ({ onClose }) => {
   return (
     <div className='fixed md:hidden w-[90vw] bg-white h-[95vh] overflow-y-scroll top-[2.5vh] z-50 py-10 left-[5vw]'>
             <div className="container mx-auto px-[20px] md:px-0 flex flex-col gap-10">
@@ -33,15 +34,17 @@ const Sidebar = ({onClose }) => {
 
 
 
+
 const NavItemText = [
   {
     text: "Home",
     dropdown: false,
+    link: "/"
   },
   {
     text: "About",
-    dropdown: true,
-    modal: "about"
+    dropdown: false,
+    link: "/about",
   },
   {
     text: "Courses",
@@ -51,15 +54,17 @@ const NavItemText = [
   {
     text: "Bootcamps",
     dropdown: true,
-    modal: "courses"
+    modal: "about"
   },
   {
     text: "Programs",
-    dropdown: false
+    dropdown: false,
+    link: "/programs"
   },
   {
     text: "FAQ",
     dropdown: false,
+    link: "/faq"
   },
   {
     text: "Blogs",
@@ -67,23 +72,45 @@ const NavItemText = [
   }
 ]
 
-const Nav = ({}) => {
+const Nav = () => {
+  const {modalHandler, setModalContentAction} = useContext(ModalContext)
+
+  const handlefunction = (dropdown, modalcontent) => {
+    if(dropdown) {
+      console.log("clicked") 
+      setModalContentAction(modalcontent)
+      modalHandler()
+    }
+  }
+
     return (
         <div className='flex gap-9 flex-col mb-4'>
-            
-                {NavItemText.map((item) => <NavItem {...item}/> )}
+                {NavItemText.map((item, index) => <NavItem {...item} onclick={() => handlefunction(item.dropdown, item.modal)} key={index}/> )}
         </div>
     )
 }
 
 
-const NavItem = ({text, dropdown, onclick}) => {
-  
+const NavItem = ({text, dropdown, onclick, link, color}) => {
+  const navigate = useNavigate()
+  const {sidebarHandler} = useContext(ModalContext)
+  const runFunction = () => {
+    console.log("runn", link)
+    if(link) {
+      navigate(link)
+      
+    }
+    else {
+      // onclick()
+      window.alert("no mobile view yet")
+    }
+    sidebarHandler()
+  }  
 
     return (
-      <div className=' font-MulishRegular font-normal leading-[17.58px] text-[13.5px] cursor-pointer' >
+      <div className=' font-MulishRegular font-normal leading-[17.58px] text-[13.5px] cursor-pointer' onClick={runFunction}>
         <p>{text}</p>
-        <div onClick={onclick}>
+        <div >
         </div>
       </div>
     )

@@ -10,7 +10,7 @@ const ModalWrapper = ({showWrapper, children}) => {
   }}
   onClick={() => modalHandler()}
   >
-    <div className='w-full h-[80vh] bg-white relative'>
+    <div className='w-full h-full md:h-[80vh] bg-white relative'>
     <div className=' before:content-[""] before:rounded before:ml-[475px]  before:mt-[6px] before:absolute before:top-0 before:block before:w-[85px] before:h-[7px] before:bg-purple'>
         <div className='px-[104px] mt-[63px]'>
             {children}
