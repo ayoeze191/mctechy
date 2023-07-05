@@ -14,15 +14,16 @@ import Programs from './pages/Programs/ProgramsPage';
 import { Course } from './pages/Courses/CoursePage';
 import Registration from './pages/User/Registration';
 import Faqpage from './pages/FAQ/Faqpage.jsx';
+import UpComingProgramPage from './pages/UpcomingProgram/UpComingProgramPage';
 
-export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: () => {}, sideBar :true, sidebarHandler: () => {}})
+export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: () => {}, sideBar :false, sidebarHandler: () => {}})
 
 
 
 function App() {
   const [showModal, setShowmodal] = useState(false)
   const [modalContent, setModalContent] = useState('courses')
-  const [sideBar, setSidebar] = useState(true)
+  const [sideBar, setSidebar] = useState(false)
 
   const handleModal = () => {
     console.log("clicking")
@@ -68,6 +69,10 @@ function App() {
         {
           path: "/faq",
           element:<Faqpage />
+        },
+        {
+          path: "/upcoming",
+          element: <UpComingProgramPage />
         }
       ]
     },
