@@ -29,7 +29,7 @@ const Header = ({color}) => {
 
 
   return (
-    <div className={fix?`fixed w-full top-0 shadow-lg bg-${color=='white'?'purple':'white'}`:'relative'} style={{'transition': 'all 1s'}}>
+    <div className={fix?`fixed w-full top-0 shadow-lg z-50 bg-${color=='white'?'purple':'white'}`:'relative'} style={{'transition': 'all 1s'}}>
     <div className={`flex justify-between w-full bg-[inherit] container mx-auto px-[20px] md:px-0 h-full items-center ${fix?'py-2':'py-0'}`}>
         <Link className='h-full flex items-center' to={'/'}>
           <img src={color=="white"?Logo:LogoPurple} className='w-[140px] h-[24px] md:w-[initial] md:h-[initial]' />
