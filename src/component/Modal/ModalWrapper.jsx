@@ -4,7 +4,7 @@ import { ModalContext } from '../../App'
 const ModalWrapper = ({showWrapper, children}) => {
   const {modalHandler} = useContext(ModalContext)
   return (
-    <div className='h-[100vh] fixed bottom-0 modalWrapper flex items-end' style={{
+    <div className='h-[100vh] fixed bottom-0 modalWrapper flex items-end z-50' style={{
       transform: showWrapper?'translateY(0px)':'translateY(100%)',
       transition: "0.3s all"
   }}

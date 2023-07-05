@@ -12,14 +12,17 @@ import About from './pages/About/Aboutpage';
 import Frontendpage from './pages/Frontend/Frontendpage';
 import Programs from './pages/Programs/ProgramsPage';
 import { Course } from './pages/Courses/CoursePage';
+import Registration from './pages/User/Registration';
+import Faqpage from './pages/FAQ/Faqpage.jsx';
 
-export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: () => {}})
+export const ModalContext = createContext({showModal: false, modalHandler: () => {}, modalContent: 'courses', setModalContentAction: () => {}, sideBar :true, sidebarHandler: () => {}})
 
 
 
 function App() {
   const [showModal, setShowmodal] = useState(false)
   const [modalContent, setModalContent] = useState('courses')
+  const [sideBar, setSidebar] = useState(true)
 
   const handleModal = () => {
     console.log("clicking")
@@ -29,6 +32,9 @@ function App() {
   const setModalContentAction = (value) => {
       setModalContent(value)
   }
+  const handleSidebar = (value) => {
+    setSidebar(!sideBar)
+}
 
   const router = createBrowserRouter([
     {
@@ -54,6 +60,14 @@ function App() {
         {
           path: "/courses",
           element: <Course />
+        },
+        {
+          path: "/registration",
+          element: <Registration />
+        },
+        {
+          path: "/faq",
+          element:<Faqpage />
         }
       ]
     },
@@ -61,7 +75,7 @@ function App() {
   ]);
 
   return (
-    <ModalContext.Provider value={{showModal, modalHandler: handleModal, modalContent, setModalContentAction}}>
+    <ModalContext.Provider value={{showModal, modalHandler: handleModal, modalContent, setModalContentAction, sideBar, sidebarHandler: handleSidebar}}>
       <RouterProvider router={router} />
     </ModalContext.Provider>
   )

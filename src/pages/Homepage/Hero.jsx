@@ -44,7 +44,7 @@ const Hero = () => {
             </div>
             </div>
         </div>
-        <div className='w-[350px] sm:w-1/2 h-[373px] sm:h-[initial] object-center'>
+        <div className='w-full max-w-[350px] mx-auto sm:w-1/2 h-[373px] sm:h-[initial] object-center'>
             <img src={herobg} alt=""  className='w-full block sm:hidden'/>
             <img src={herobgdesk} alt="" className='hidden sm:block w-full h-full sm:h-[initial]'/>
         </div>

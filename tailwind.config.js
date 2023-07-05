@@ -23,8 +23,10 @@ export default {
        aboutHero:  'url("./assets/aboutpage/herobg.png")',
        aboutHeroMobile:  'url("./assets/aboutpage/aboutHerobgmobile.png")',
        frontendHero: 'url("./assets/frontendpage/frontendbg.png")',
-       frontendherobgmobile: 'url("./assets/frontendpage/frontendherobgmobile.png")'
-
+       frontendherobgmobile: 'url("./assets/frontendpage/frontendherobgmobile.png")',
+       faqherobgmobile: 'url("./assets/Faq/faqmobile.png")',
+       faqherobgdesktop: 'url("./assets/Faq/faqdesktop.png")',
+      
       }
     },
     

@@ -10,23 +10,17 @@ import { Outlet } from "react-router-dom"
 import Sidebar from "./ui/Sidebar"
 
 
-
 const Layout = ({ children }) => {
-    const {showModal, modalHandler, modalContent} = useContext(ModalContext)
-    
-    const [sideBar, setSidebar] = useState(true)
-
-    const handleSiderBar = () => {
-        setSidebar(!sideBar)
-    }
+    const {showModal, modalHandler, modalContent, sideBar, sidebarHandler} = useContext(ModalContext)
 
     useEffect(() => {
+
         const handleClickChange = (e) => {
             console.log("event listener")
             const clickedElemnt = e.target;
             const excludedElement = document.querySelector('.modalWrapper');
             console.log("event listener")
-            if(!excludedElement.contains(clickedElemnt)) {
+            if(!excludedElement.classList.contains(clickedElemnt)) {
                 modalHandler()
             }
             }
@@ -44,7 +38,7 @@ const Layout = ({ children }) => {
     return (    
         <div className="h-fit px-0">
             <Topbar />
-            {sideBar && <Sidebar onClose={handleSiderBar}/>}
+            {sideBar && <Sidebar onClose={sidebarHandler}/>}
             <div>
             <Outlet />
             <ModalWrapper showWrapper={showModal}>

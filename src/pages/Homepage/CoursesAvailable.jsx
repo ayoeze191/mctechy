@@ -7,18 +7,21 @@ import businessAnalyst from "./../../assets/homepage/courses/businessAnalyst.png
 import productdesign from "./../../assets/homepage/courses/productdesign.png"
 import projectmanagement from "./../../assets/homepage/courses/projectmanagement.png"
 import useQuery from '../../assets/hooks/useQuery';
+import { useNavigate } from 'react-router-dom';
 
 
 const allCourses = [
   {
     image:  backend,
     title: "Backend Development",
-    text: "We believe that hands-on learning is the fastest way to mastery. Work on real projects, learn from industry experts, and get experience working with clients."
+    text: "We believe that hands-on learning is the fastest way to mastery. Work on real projects, learn from industry experts, and get experience working with clients.",
+    
   },
   {
     image: frontend,
     title: "Frontend Development",
-    text: "Interested in creativity, problem-solving, and working with the latest technologies? Front end development could be an excellent choice"
+    text: "Interested in creativity, problem-solving, and working with the latest technologies? Front end development could be an excellent choice",
+    link: "/frontend"
   },
   {
     image: productdesign,
@@ -75,11 +78,18 @@ const CoursesAvailable = () => {
 export default CoursesAvailable
 
 
-const Course = ({image, title, text}) => {
+const Course = ({image, title, text, link}) => {
+  const navigate = useNavigate()
+  // const OnclickHandler = () => {
+
+  // }
+
   return ( 
     <div className='py-[24.8px] bg-white shadow-2xl font-MulishRegular px-[26px]
-    '>
-      <div><img src={image} alt="" className='md:w-full' /></div>
+    '
+    onClick={() => navigate(link)}
+    >
+      <div><img src={image} alt="" className='w-full' /></div>
       <h1 className='text-purple  font-semibold text-[21.4px] leading-[28.86px] mt-[23.89px]'>{title}</h1>
       <p className='font-medium text-[14.27px] leading-[26.75px] mt-[15.32px] '>{text}</p>
       <button className='flex gap-[7.25px] font-semibold text-[14.27px]  items-center mt-[10.53px] leading-[25.42px] text-purple'>

@@ -1,32 +1,52 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import hamburger from "./../assets/header/hamburger.png" 
 import Logo from "./../assets/header/Logo.png" 
 import LogoPurple from "./../assets/header/LogoPurple.png" 
-import {BsList} from "react-icons/bs"
+
 import arrowdown from "./../assets/header/arrowdown.png"
 import { ModalContext } from '../App'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import {VscListFlat} from "react-icons/vsc"
+import {IoMdArrowDropdown } from "react-icons/io"
 
 
 const Header = ({color}) => {
+  const { sidebarHandler} = useContext(ModalContext)
+
+  const [fix, setFix] = useState(false)
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 57.75) {
+      setFix(true)
+    }
+    else if(window.scrollY < 57.75) {
+      setFix(false)
+    }
+  })
+  useEffect(() => {
+  
+  }, [])
+
+
   return (
-    <div className=''>
-    <div className='flex justify-between w-full bg-[inherit] container mx-auto px-[20px] md:px-0 h-[37px] '>
-        <div className='h-full flex items-center  '>
+    <div className={fix?`fixed w-full top-0 shadow-lg bg-${color=='white'?'purple':'white'}`:'relative'} style={{'transition': 'all 1s'}}>
+    <div className={`flex justify-between w-full bg-[inherit] container mx-auto px-[20px] md:px-0 h-full items-center ${fix?'py-2':'py-0'}`}>
+        <Link className='h-full flex items-center' to={'/'}>
           <img src={color=="white"?Logo:LogoPurple} className='w-[140px] h-[24px] md:w-[initial] md:h-[initial]' />
-        </div>
-        
-        <div className='h-full flex items-center md:hidden'>
-            <BsList color={color=='white'?'white':'black'} width={'24px'} height={'24px'}/>
+        </Link>
+        <div className='h-full flex items-center md:hidden ' onClick = {sidebarHandler}>
+            <VscListFlat color={color=='white'?'white':'black'} Size={100} fontWeight={900}  />
         </div>
         <Nav color={color}/>
         <div className='hidden md:flex gap-[34px] font-Poppins text-[13px]'>
           <button className={`text-${color}`}>
             Login
           </button>
-          <button className= {`bg-${color=="white"?"white":"purple"} text-${color=="white"?"black":"white"}  w-[82.5px] h-[38.47px] rounded-md color-[#460482]`}>
+          <Link to={'/registration'}>
+            <button className= {`bg-${color=="white"?"white":"purple"} text-${color=="white"?"black":"white"}  w-[82.5px] h-[38.47px] rounded-md color-[#460482]`} >
             Signup
-          </button>
+            </button>
+          </Link>
           </div>
     </div>
     </div>
@@ -34,7 +54,7 @@ const Header = ({color}) => {
 }
 
 
-const NavItem = ({text, dropdown, onclick, link}) => {
+const NavItem = ({text, dropdown, onclick, link, color}) => {
   const navigate = useNavigate()
   const runFunction = () => {
     console.log("runn". link)
@@ -50,7 +70,7 @@ const NavItem = ({text, dropdown, onclick, link}) => {
     <div className='flex items-center gap-[13px] font-DmSansRegular font-medium leading-[17.58px] text-[13.5px] cursor-pointer' onClick={runFunction}>
       <p>{text}</p>
       <div >
-        {dropdown?<img src={arrowdown} />: null}
+        {dropdown?<IoMdArrowDropdown color={color}/>: null}
       </div>
     </div>
   )
@@ -64,8 +84,8 @@ const NavItemText = [
   },
   {
     text: "About",
-    dropdown: true,
-    modal: "about",
+    dropdown: false,
+    link: "/about",
   },
   {
     text: "Courses",
@@ -75,7 +95,7 @@ const NavItemText = [
   {
     text: "Bootcamps",
     dropdown: true,
-    modal: "courses"
+    modal: "about"
   },
   {
     text: "Programs",
@@ -85,6 +105,7 @@ const NavItemText = [
   {
     text: "FAQ",
     dropdown: false,
+    link: "/faq"
   },
   {
     text: "Blogs",
@@ -106,7 +127,7 @@ const Nav = ({color}) => {
 
   return (
     <div className={`md:flex gap-[40px] items-center hidden text-${[color]}`}>
-        {NavItemText.map(item => <NavItem {...item} key={item.text} onclick={() => handlefunction(item.dropdown, item.modal)}/>)}
+        {NavItemText.map(item => <NavItem {...item} color={color} key={item.text} onclick={() => handlefunction(item.dropdown, item.modal)}/>)}
     </div>
   )
 }
